@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Home</title>
-    <link rel="stylesheet" href="./css/styles.css" />
+    <link rel="stylesheet" href="/css/styles.css" />
     <link
       href="https://fonts.googleapis.com/css2?family=Archivo:wght@300;600;700&family=IM+Fell+Great+Primer:ital@1&family=Old+Standard+TT&family=Raleway:wght@400;500;600;700&family=Roboto:wght@400;700&display=swap"
       rel="stylesheet"
@@ -33,14 +33,14 @@
         <div class="navbar">
           <div class="logo">
             <button class="btn btn__menu" id="open">
-              <img src="../../php/src/assets/menu.png" alt="" width="18" />
+              <img src="/assets/menu.png" alt="" width="18" />
             </button>
             <button class="btn btn__close--click" id="close">
-              <img src="../../php/src/assets/close.png" alt="" width="18" />
+              <img src="/assets/close.png" alt="" width="18" />
             </button>
             <img
               class="logo-img"
-              src="../../php/src/assets/H.png"
+              src="/assets/H.png"
               alt=""
               width="20"
               height="20"
@@ -52,16 +52,16 @@
           </div>
           <ul class="nav__list" id="list">
             <li class="nav__li nav__li--first">
-              <a class="nav__item" href="../php/about" id="a_whyus">About&nbspUs</a>
+              <a class="nav__item" href="/about" id="a_whyus">About&nbspUs</a>
             </li>
             <li class="nav__li">
-              <a class="nav__item" href="../php/rooms">Rooms</a>
+              <a class="nav__item" href="/rooms">Rooms</a>
             </li>
             <li class="nav__li">
-              <a class="nav__item" href="../php/offers">Offers</a>
+              <a class="nav__item" href="/offers">Offers</a>
             </li>
             <li class="nav__li">
-              <a class="nav__item" href="../php/contact">Contact</a>
+              <a class="nav__item" href="/contact">Contact</a>
             </li>
           </ul>
           <div class="icons-nav">
@@ -102,7 +102,7 @@
 <div class="global-services-container">
       <div class="social__container">
         <div class="container-logo">
-          <div class="logo"><img src="../../php/src/assets/H_nobg.png" alt="" /></div>
+          <div class="logo"><img src="/assets/H_nobg.png" alt="" /></div>
           <h1 class="logo-title">
             <span class="bold">Hotel</span><br />Miranda
           </h1>
@@ -216,21 +216,21 @@
       <div class="contact__container">
         <h1 class="title">Contact Us.</h1>
         <div class="card-contact">
-          <img src="../../php/src/assets/phone.png" alt="" />
+          <img src="/assets/phone.png" alt="" />
           <div>
             <h1 class="title">Phone Number</h1>
             <h6 class="text">+984 654 864 17 434</h6>
           </div>
         </div>
         <div class="card-contact">
-          <img src="../../php/src/assets/message.png" alt="" />
+          <img src="/assets/message.png" alt="" />
           <div>
             <h1 class="title">Email</h1>
             <h6 class="text">hotelmiranda@gmail.com</h6>
           </div>
         </div>
         <div class="card-contact">
-          <img src="../../php/src/assets/map.png" alt="" />
+          <img src="/assets/map.png" alt="" />
           <div>
             <h1 class="title">Find Us</h1>
             <h6 class="text">Crazy Avenue 54, Oklahoma</h6>

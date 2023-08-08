@@ -7,7 +7,7 @@
             <h3 class="title">Ultimate Room</h3>
         </div>
         <div class="banner">
-            <a class="home" href="../php/index.php">Home</a>
+            <a class="home" href="/index.php">Home</a>
             <span>|</span>
             <h1 class="page">Room Details</h1>
         </div>
@@ -18,7 +18,7 @@
                 <h6>Double bed</h6>
                 <h1>Luxury Double Bed</h1>
                 <h1 class="price">$345<span class="night">/Night</span></h1>
-                <img src="../../php/src/assets/room3.jpg" alt="">
+                <img src="/assets/room3.jpg" alt="">
             </div>
             <div class="date-check__globalcontainer">
                 <h1 class="title">Check Avaliability</h1>
@@ -64,60 +64,60 @@
             <div class="row">
                 <div class="column">
                 <h6>
-            <span><img src="../../php/src/assets/acondicionador-de-aire.png" alt="" /></span>Air conditioner
+            <span><img src="/assets/acondicionador-de-aire.png" alt="" /></span>Air conditioner
           </h6>
           <h6>
-            <span><img src="../../php/src/assets/desayuno.png" alt="" /></span>Breakfast
+            <span><img src="/assets/desayuno.png" alt="" /></span>Breakfast
           </h6>
           <h6>
-            <span><img src="../../php/src/assets/cleaning.png" alt="" /></span>Cleaning
+            <span><img src="/assets/cleaning.png" alt="" /></span>Cleaning
           </h6>
           <h6>
-            <span><img src="../../php/src/assets/comida.png" alt="" /></span>Grocery
+            <span><img src="/assets/comida.png" alt="" /></span>Grocery
           </h6>
           <h6>
-            <span><img src="../../php/src/assets/sex-shop.png" alt="" /></span>Shop
+            <span><img src="/assets/sex-shop.png" alt="" /></span>Shop
             near
           </h6>
           <h6>
-            <span><img src="../../php/src/assets/apoyo.png" alt="" /></span>24/7
+            <span><img src="/assets/apoyo.png" alt="" /></span>24/7
             Online Support
           </h6>
           <h6>
-            <span><img src="../../php/src/assets/seguridad.png" alt="" /></span>Smart Security
+            <span><img src="/assets/seguridad.png" alt="" /></span>Smart Security
           </h6>
                 </div>
                 <div class="column">
                 <h6>
-            <span><img src="../../php/src/assets/wifi.png" alt="" /></span>High
+            <span><img src="/assets/wifi.png" alt="" /></span>High
             speed Wifi
           </h6>
           <h6>
-            <span><img src="../../php/src/assets/cocina.png" alt="" /></span>Kitchen
+            <span><img src="/assets/cocina.png" alt="" /></span>Kitchen
           </h6>
           <h6>
-            <span><img src="../../php/src/assets/ducha.png" alt="" /></span>Shower
+            <span><img src="/assets/ducha.png" alt="" /></span>Shower
           </h6>
           <h6>
-            <span><img src="../../php/src/assets/cama.png" alt="" /></span>Single
+            <span><img src="/assets/cama.png" alt="" /></span>Single
             Bed
           </h6>
           <h6>
-            <span><img src="../../php/src/assets/toalla.png" alt="" /></span>Towers
+            <span><img src="/assets/toalla.png" alt="" /></span>Towers
           </h6>
           <h6>
-            <span><img src="../../php/src/assets/clave.png" alt="" /></span>Stron
+            <span><img src="/assets/clave.png" alt="" /></span>Stron
             Locker
           </h6>
           <h6>
-            <span><img src="../../php/src/assets/lider.png" alt="" /></span>Expert
+            <span><img src="/assets/lider.png" alt="" /></span>Expert
             Team
           </h6>
                 </div>
             </div>
         </div>
         <div class="employee">
-            <img src="../../php/src/assets/girl.jpg" alt="" />
+            <img src="/assets/girl.jpg" alt="" />
             <h1>Rosalina D. William</h1>
             <h6>Founder, qux co</h6>
             <p>
@@ -170,11 +170,11 @@
                             </svg>
                         </div>
                         <div class="slider">
-                            <img src="../../php/src/assets/room2.jpg" alt="">
+                            <img src="/assets/room2.jpg" alt="">
                         </div>
-                        <!-- <button class="left"><img src="../../php/src/assets/left.png" alt="" /></button>
+                        <!-- <button class="left"><img src="/assets/left.png" alt="" /></button>
                         <button class="right">
-                            <img src="../../php/src/assets/right.png" alt="" />
+                            <img src="/assets/right.png" alt="" />
                         </button> -->
                     </div>
                     <div class="description">
@@ -220,7 +220,7 @@
                             </svg>
                         </div>
                         <div class="slider">
-                            <img src="../../php/src/assets/room6.jpg" alt="">
+                            <img src="/assets/room6.jpg" alt="">
                         </div>
                         <!-- <button class="left"><img src="./assets/left.png" alt="" /></button>
                         <button class="right">
@@ -246,7 +246,7 @@
     @endsection
     @section('scripts')
 </main>
-<script src="../../php/src/js/index.js"></script>
+<script src="/js/index.js"></script>
 
 </body>
 

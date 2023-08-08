@@ -7,7 +7,7 @@
       <h3 class="title">Ultimate Room</h3>
     </div>
     <div class="banner">
-      <a class="home" href="../php/index.php">Home</a>
+      <a class="home" href="/index.php">Home</a>
       <span>|</span>
       <h1 class="page">Rooms</h1>
     </div>
@@ -49,19 +49,19 @@
             <div class="slider">
 
 
-              <img src="" alt="" />
+              <img src="{{ $room -> images }}" alt="" />
 
             </div>
 
           </div>
           <div class="description">
             
-            <h1 class="title"><a href="../php/room.php"></a></h1>
+            <h1 class="title"><a href="/room">{{ $room -> title }}</a></h1>
             <p class="text">
            
             </p>
             <div class="text-container">
-              <h1 class="price">{{$room['price']}}<span class="night">/Night</span></h1>
+              <h1 class="price">{{ $room -> price }}<span class="night">/Night</span></h1>
               <h6>Booking Now</h6>
             </div>
           </div>
@@ -81,7 +81,7 @@
   @endsection
   @section('scripts')
 </main>
-<script src="../../php/src/js/index.js"></script>
+<script src="/js/index.js"></script>
 
 </body>
 
