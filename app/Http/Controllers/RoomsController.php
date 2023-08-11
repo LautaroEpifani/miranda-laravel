@@ -19,7 +19,7 @@ class RoomsController extends Controller
         return view('room', ['room' => $room]);
     }
 
-    public function getOffers(){
+    public function indexOffers(){
         $offers = Room::all();
         return view('offers', [
             'offers' => $offers,

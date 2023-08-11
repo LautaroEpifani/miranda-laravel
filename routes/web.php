@@ -20,7 +20,7 @@ Route::get('/rooms', [RoomsController::class, 'index']);
 
 Route::get('/room/{id}', [RoomsController::class, 'show']);
 
-Route::get('/offers', [RoomsController::class, 'getOffers']);
+Route::get('/offers', [RoomsController::class, 'indexOffers']);
 
 
 
