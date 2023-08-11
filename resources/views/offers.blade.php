@@ -1,19 +1,3 @@
-<?php
-include('./db.php');
-
-$getAllRooms = 'SELECT * FROM rooms';
-
-$result = mysqli_query($connection, $getAllRooms);
-
-$rooms = mysqli_fetch_all($result, MYSQLI_ASSOC);
-
-$offers_one = array_slice($rooms, 1, 3);
-$offers_two = array_slice($rooms, 6, 9);
-$offers = array_merge($offers_one, $offers_two)
-
-// print_r($rooms);
-?>
-
 @extends('layout')
 @section('content')
 <main>
@@ -29,21 +13,21 @@ $offers = array_merge($offers_one, $offers_two)
     </div>
   </div>
   <div class="offer">
-    <?php foreach ($offers as $room) { ?>
+  @foreach($offers as $room)
       <div class="double-bed__container">
-        <img class="offer-image" src="<?php echo htmlspecialchars($room['images']); ?>" alt="" />
+        <img class="offer-image" src="{{ $room -> images }}" alt="" />
         <div class="sub-container">
           <div class="title-container">
             <div class="price-container">
               <div class="original-container">
-                <h2 class="original"><?php echo htmlspecialchars($room['price']); ?></h2>
+                <h2 class="original">{{ $room -> price }}</h2>
                 <span class="night">/Night</span>
               </div>
-              <h2 class="discount"><?php echo htmlspecialchars($room['offer_price']); ?><span class="night">/Night</span></h2>
+              <h2 class="discount">{{ $room -> offer_price }}<span class="night">/Night</span></h2>
             </div>
           </div>
-          <h6><?php echo htmlspecialchars($room['room_type']); ?></h6>
-          <h1><?php echo htmlspecialchars($room['title']); ?></h1>
+          <h6>{{ $room -> room_type }}</h6>
+          <h1>{{ $room -> title }}</h1>
 
           <div class="text-container">
             <div class="desktop">
@@ -125,7 +109,7 @@ $offers = array_merge($offers_one, $offers_two)
           </div>
         </div>
       </div>
-
+     
   </div>
   <div class="amenities__container">
     <h1 class="title">Amenities</h1>
@@ -187,7 +171,7 @@ $offers = array_merge($offers_one, $offers_two)
     </div>
     <button>Book now</button>
   </div>
-<?php } ?>
+  @endforeach
 </div>
 <div class="popular__container">
   <h5>popular list</h5>
@@ -234,7 +218,7 @@ $offers = array_merge($offers_one, $offers_two)
         </button>
       </div>
       <div class="description">
-        <h1 class="title">Minimal Duplex Room</h1>
+      <a href="/rooms"><h1 class="title">Ergonomic</h1></a>
         <p class="text">
           Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim,
           voluptat quasi as voluptatibus consequuntu .
@@ -282,7 +266,7 @@ $offers = array_merge($offers_one, $offers_two)
         </div>
       </div>
       <div class="description">
-        <h1 class="title">Minimal Duplex Room</h1>
+      <a href="/rooms"> <h1 class="title">Ergonomic Room</h1></a>
         <p class="text">
           Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim,
           voluptat quasi as voluptatibus consequuntu .
@@ -328,7 +312,7 @@ $offers = array_merge($offers_one, $offers_two)
         </div>
       </div>
       <div class="description">
-        <h1 class="title">Minimal Duplex Room</h1>
+      <a href="/rooms"><h1 class="title">Fantastic Room</h1></a>
         <p class="text">
           Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim,
           voluptat quasi as voluptatibus consequuntu .
@@ -375,7 +359,7 @@ $offers = array_merge($offers_one, $offers_two)
 
       </div>
       <div class="description">
-        <h1 class="title">Minimal Duplex Room</h1>
+      <a href="/rooms"> <h1 class="title">Bespoke</h1></a>
         <p class="text">
           Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim,
           voluptat quasi as voluptatibus consequuntu .

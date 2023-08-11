@@ -1,6 +1,7 @@
 <?php
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\RoomsController; 
+use App\Http\Controllers\ContactController;
 
 
 Route::get('/', function () {
@@ -11,15 +12,19 @@ Route::get('/about', function () {
     return view('about');
 });
 
-Route::get('/offers', function () {
-    return view('offers');
-});
-
 Route::get('/contact', function () {
     return view('contact');
 });
+Route::post('/contact', [ContactController::class, 'create']);
 
-Route::get('/rooms', [RoomsController::class, 'getRooms']);
 
-Route::get('/rooms/{id}', [RoomsController::class, 'getSingleRoom']);
+Route::get('/offers', [RoomsController::class, 'getOffers']);
+
+Route::get('/rooms', [RoomsController::class, 'index']);
+
+Route::get('/room/{id}', [RoomsController::class, 'show']);
+
+
+
+
 

@@ -56,7 +56,7 @@
           </div>
           <div class="description">
             
-            <h1 class="title"><a href="/room">{{ $room -> title }}</a></h1>
+            <h1 class="title"><a href="/room/{{ $room -> id }}">{{ $room -> title }}</a></h1>
             <p class="text">
            
             </p>
@@ -69,13 +69,7 @@
         @endforeach
     </div>
     <ul class="pagination">
-      <li><a href="#">«</a></li>
-      <li><a href="#">1</a></li>
-      <li><a class="active" href="#">2</a></li>
-      <li><a href="#">3</a></li>
-      <li><a href="#">...</a></li>
-      <li><a href="#">10</a></li>
-      <li><a href="#">»</a></li>
+      {{$rooms -> links()}}
     </ul>
   </div>
   @endsection

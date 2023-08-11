@@ -9,10 +9,10 @@
           <button class="learn-more">Lean more</button>
           </div>
         </div>
-       <div class="submit-message-container">
-                <h1>Thank you very much,</h1>
-                <h4>These dates are available!</h4>
-            </div>
+       <!-- <div class="submit-message-container">
+                <h1></h1>
+      
+            </div> -->
        
         <form class="date-check" action="index.php" method="POST">
           <div class="container-input">
@@ -180,7 +180,7 @@
             </svg>
           </div>
           <div class="images-container">
-            <img src="/assets/room2.png" alt="" class="image-slider active" id="first_image" />
+            <img src="/assets/room2.jpg" alt="" class="image-slider active" id="first_image" />
             <img
               src="/assets/luxury.jpg"
               alt=""

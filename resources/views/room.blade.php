@@ -7,7 +7,7 @@
             <h3 class="title">Ultimate Room</h3>
         </div>
         <div class="banner">
-            <a class="home" href="/index.php">Home</a>
+            <a class="home" href="/index">Home</a>
             <span>|</span>
             <h1 class="page">Room Details</h1>
         </div>
@@ -15,10 +15,10 @@
     <div class="double-bed__container">
         <div class="container-desktop">
             <div class="description">
-                <h6>Double bed</h6>
-                <h1>Luxury Double Bed</h1>
-                <h1 class="price">$345<span class="night">/Night</span></h1>
-                <img src="/assets/room3.jpg" alt="">
+                <h6>{{ $room -> room_type }}</h6>
+                <h1>{{ $room -> title }}</h1>
+                <h1 class="price">{{ $room -> price }}<span class="night">/Night</span></h1>
+                <img src="{{ $room -> images }}" alt="">
             </div>
             <div class="date-check__globalcontainer">
                 <h1 class="title">Check Avaliability</h1>
@@ -26,14 +26,14 @@
                     <div class="container-input">
                         <label for="">Check In</label>
                         <div class="input">
-                            <h5>Fri. 14th June 2023</h5>
+                        <input type="date" placeholder="Fri, 14th June 2023">
                             <i class="bi bi-calendar"></i>
                         </div>
                     </div>
                     <div class="container-input">
                         <label for="">Check Out</label>
                         <div class="input">
-                            <h5>Sun, 16th June 2023</h5>
+                            <input type="date" placeholder="Sun, 16th June 2023">
                             <i class="bi bi-calendar"></i>
                         </div>
                     </div>
@@ -178,7 +178,7 @@
                         </button> -->
                     </div>
                     <div class="description">
-                        <h1 class="title">Minimal Duplex Room</h1>
+                        <a href="/rooms"><h1 class="title">Elegant Room</h1></a>
                         <p class="text">
                             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim,
                             voluptat quasi as voluptatibus consequuntu .
@@ -228,7 +228,7 @@
                         </button> -->
                     </div>
                     <div class="description">
-                        <h1 class="title">Minimal Duplex Room</h1>
+                    <a href="/rooms"><h1 class="title">Bespoke Room</h1><a>
                         <p class="text">
                             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim,
                             voluptat quasi as voluptatibus consequuntu .

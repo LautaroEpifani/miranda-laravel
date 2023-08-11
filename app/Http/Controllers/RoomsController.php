@@ -7,16 +7,22 @@ use App\Models\Room;
 
 class RoomsController extends Controller
 {
-    public function getRooms(){
-        $rooms = Room::all();
-      
-    
+    public function index(){
+        $rooms = Room::paginate(5);
         return view('rooms', [
             'rooms' => $rooms,
         ]);
-       }
+    }
     
-       public function getSingleRoom($id){
-        return view('room', ['id' => $id]);
-       }
+    public function show($id){
+        $room = Room::findOrFail($id);
+        return view('room', ['room' => $room]);
+    }
+
+    public function getOffers(){
+        $offers = Room::all();
+        return view('offers', [
+            'offers' => $offers,
+        ]);
+    }
 }

@@ -5,6 +5,10 @@
   background-color: #222222;
   margin-top: 80px;
   padding-top: 80px;
+  background-image: url("/assets/playa.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 .about-hero__container .text.text-about {
   padding-bottom: 30px;
@@ -517,6 +521,7 @@
   font-weight: 100;
   font-size: 25px;
   margin-bottom: 20px;
+  text-align: center;
 }
 .room-cards__container .room-card .description .title a {
   text-decoration: none;
@@ -560,6 +565,26 @@
   gap: 10px;
   font-size: 12px;
 }
+
+.room-cards__container .pagination > li > a,
+.room-cards__container .pagination > li > span {
+    color: #FFF;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    padding-left: 16px;
+    padding-right: 16px;
+}
+
+.room-cards__container .pagination > .active > a,
+.room-cards__container .pagination > .active > a:focus,
+.room-cards__container .pagination > .active > a:hover,
+.room-cards__container .pagination > .active > span,
+.room-cards__container .pagination > .active > span:focus,
+.room-cards__container .pagination > .active > span:hover {
+    background-color: #bdac8d;
+    border: none;  
+}
+
 .room-cards__container .pagination li {
   display: flex;
 }
@@ -716,6 +741,11 @@
   .double-bed__container .container-desktop .description {
     width: 50%;
   }
+
+  .double-bed__container .container-desktop .description img {
+    max-height: 300px;
+  }
+
   .double-bed__container .container-desktop .date-check__globalcontainer {
     width: 30%;
   }
@@ -862,7 +892,15 @@
   margin: 0 auto;
   margin-top: 50px;
   margin-bottom: 40px;
+  text-align: center;
 }
+
+.cancellation-related__container .description a {
+  text-decoration: none;
+  color: #000;
+}
+
+
 .cancellation-related__container .description .title {
   font-family: "Old Standard TT", serif;
   font-size: 50px;
@@ -917,6 +955,10 @@
   padding-left: 20px;
   padding-right: 20px;
 }
+.double-bed__container .container-desktop .description img {
+  max-height: 300px;
+}
+
 .double-bed__container .container-text button {
   display: none;
 }
@@ -1050,6 +1092,12 @@
   text-align: center;
   padding-bottom: 30px;
 }
+
+.popular__container .description a {
+  text-decoration: none;
+  color: #000;
+}
+
 .popular__container .description .title {
   font-family: "Old Standard TT", serif;
   font-size: 50px;
@@ -1207,15 +1255,14 @@
   width: 100%;
 }
 .blog-contact__container .submit-message-container {
-  height: 300px;
-  margin-top: 200px;
-  margin-bottom: 200px;
+  height: 230px;
   width: 50%;
   margin: 0 auto;
   border: 1px solid #000;
   border-radius: 20px;
   text-align: center;
-  padding-top: 100px;
+  padding-top: 60px;
+  margin-bottom: 120px;
 }
 .blog-contact__container .submit-message-container h1 {
   color: #bdac8d;
@@ -1573,6 +1620,7 @@ body {
   padding-bottom: 10px;
   font-family: FontAwesome, Arial;
   font-style: normal;
+  color-scheme: dark;
 }
 .home-hero__container .date-check .container-input .input-icon {
   font-weight: 100;
@@ -1766,6 +1814,9 @@ body {
     margin-top: 20px;
   }
 }
+
+
+
 .rooms__container {
   text-align: center;
   margin-top: 40px;
