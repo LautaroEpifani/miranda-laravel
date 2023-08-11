@@ -3,7 +3,6 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\RoomsController; 
 use App\Http\Controllers\ContactController;
 
-
 Route::get('/', function () {
     return view('index');
 });
@@ -17,12 +16,11 @@ Route::get('/contact', function () {
 });
 Route::post('/contact', [ContactController::class, 'create']);
 
-
-Route::get('/offers', [RoomsController::class, 'getOffers']);
-
 Route::get('/rooms', [RoomsController::class, 'index']);
 
 Route::get('/room/{id}', [RoomsController::class, 'show']);
+
+Route::get('/offers', [RoomsController::class, 'getOffers']);
 
 
 
