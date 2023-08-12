@@ -7,7 +7,7 @@
       <h3 class="title">Our Offers</h3>
     </div>
     <div class="banner">
-      <a class="home" href="/index.php">Home</a>
+      <a class="home" href="/">Home</a>
       <span>|</span>
       <h1 class="page">Offers</h1>
     </div>

@@ -7,7 +7,7 @@
           <h3 class="title">About Us</h3>
         </div>
         <div class="banner">
-          <a class="home" href="/index.php">Home</a>
+          <a class="home" href="/">Home</a>
           <button></button>
           <span>|</span>
           <h1 class="page">About</h1>

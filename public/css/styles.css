@@ -483,6 +483,24 @@
   padding: 20px;
 }
 
+.room-cards__container .submit-message-container {
+  height: 230px;
+  width: 50%;
+  margin: 0 auto;
+  border: 1px solid #000;
+  border-radius: 20px;
+  text-align: center;
+  padding-top: 60px;
+  margin-bottom: 120px;
+}
+.room-cards__container .submit-message-container h1 {
+  color: #bdac8d;
+  margin-bottom: 40px;
+}
+.room-cards__container .submit-message-container h4 {
+  color: #999999;
+}
+
 .room-cards__container .room-card {
   margin-bottom: 80px;
 }
@@ -701,6 +719,57 @@
   padding-bottom: 20px;
   padding-top: 20px;
 }
+
+.double-bed__container
+  .date-check__globalcontainer
+  .container
+  .container-input
+  input {
+    width: 100%;
+    color: #686868;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -ms-appearance: none;
+    appearance: none;
+    background-color: #FFF;
+    outline: 0;
+    box-shadow: none;
+    border-top: 0;
+    border-left: 0;
+    border-right: 0;
+    font-size: 10px;
+    border-bottom: 1px #bead8e solid;
+    padding-bottom: 10px;
+    font-family: FontAwesome, Arial;
+    font-style: normal;
+    position: relative;
+    margin-left: 20px;
+}
+
+.double-bed__container
+  .date-check__globalcontainer
+  .container
+  .container-input input[type="date"]::-webkit-calendar-picker-indicator {
+  background: transparent;
+  bottom: 0;
+  color: transparent;
+  cursor: pointer;
+  height: auto;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: auto;
+}
+
+.double-bed__container
+  .date-check__globalcontainer
+  .container
+  .container-input input[type="date"]::-webkit-datetime-edit-text {
+  margin-left: 2px;
+}
+
+
 .double-bed__container
   .date-check__globalcontainer
   .container
@@ -1528,13 +1597,12 @@ body {
   margin-bottom: 100px;
   width: 100%;
   margin: 0 auto;
-  border: 1px solid #fff;
   text-align: center;
-  padding-top: 20px;
-  background-color: #bdac8d;
+  padding-top: 30px;
+  background-color: #333333;
 }
 
-.home-hero__container .submit-message-container h1 {
+.home-hero__container .submit-message-container h2 {
   color: #f8f8f8;
   margin-bottom: 10px;
   font-family: "Archivo", sans-serif;
@@ -1620,8 +1688,26 @@ body {
   padding-bottom: 10px;
   font-family: FontAwesome, Arial;
   font-style: normal;
-  color-scheme: dark;
+  position: relative;
 }
+
+.home-hero__container .date-check .container-input input[type="date"]::-webkit-calendar-picker-indicator {
+  background: transparent;
+  bottom: 0;
+  color: transparent;
+  cursor: pointer;
+  height: auto;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: auto;
+}
+
+.home-hero__container .date-check .container-input input[type="date"]::-webkit-datetime-edit-text {
+  margin-left: 2px;
+}
+
 .home-hero__container .date-check .container-input .input-icon {
   font-weight: 100;
   color: #000;

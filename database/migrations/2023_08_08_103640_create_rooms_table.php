@@ -14,18 +14,18 @@ return new class extends Migration
         Schema::create('rooms', function (Blueprint $table) {
             $table->id();
             $table->timestamps();
-            $table->string('title')
-            $table->string('images')
-            $table->string('room_type')
-            $table->number('room_number')
-            $table->string('amenities')
-            $table->number('price')
-            $table->number('discount')
-            $table->string('offer')
-            $table->number('offer_price')
-            $table->string('description')
-            $table->string('cancellation')
-            $table->enum('Avaliable', 'Booked')
+            $table->string('title');
+            $table->string('images');
+            $table->string('room_type');
+            $table->number('room_number');
+            $table->string('amenities');
+            $table->number('price');
+            $table->number('discount');
+            $table->string('offer');
+            $table->number('offer_price');
+            $table->string('description');
+            $table->string('cancellation');
+            $table->enum('status',['Avaliable', 'Booked']);
         });
     }
 

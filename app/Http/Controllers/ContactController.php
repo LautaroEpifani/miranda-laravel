@@ -7,9 +7,8 @@ use App\Models\Message;
 
 class ContactController extends Controller
 {
-    public function create(){
+    public function store(){
         $message = new Message();
-
         $message -> name = request('fullName');
         $message -> email = request('email');
         $message -> phone = request('phone'); 

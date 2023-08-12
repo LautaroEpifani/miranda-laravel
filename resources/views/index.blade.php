@@ -14,19 +14,28 @@
       
             </div> -->
        
-        <form class="date-check" action="index.php" method="POST">
+            @if(session()->has('message'))
+  <div class="submit-message-container">
+    
+                <h2>We have rooms available on that date ¡Check it out!</h2>
+    </div>  
+    @else 
+    <form class="date-check"  method="POST">
+    @csrf 
           <div class="container-input">
             <label for="">Arrival Date</label>
-            <input type="date" name="arrival"/>
+            <input type="date" name="checkIn"/>
             <div class="input-error"> </div>
           </div>
           <div class="container-input">
             <label for="">Departure Date</label>
-            <input type="date" name="departure"/>
+            <input type="date" name="checkOut"/>
             <div class="input-error"> </div>
           </div>
           <button type="submit" name="submit" class="btn-check">Check availability</button>
       </form>
+    @endif  
+       
 
       </div>
     </header>

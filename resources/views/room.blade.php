@@ -7,7 +7,7 @@
             <h3 class="title">Ultimate Room</h3>
         </div>
         <div class="banner">
-            <a class="home" href="/index">Home</a>
+            <a class="home" href="/">Home</a>
             <span>|</span>
             <h1 class="page">Room Details</h1>
         </div>
@@ -20,26 +20,29 @@
                 <h1 class="price">{{ $room -> price }}<span class="night">/Night</span></h1>
                 <img src="{{ $room -> images }}" alt="">
             </div>
-            <div class="date-check__globalcontainer">
+            <form class="date-check__globalcontainer" method="POST">
+            @csrf   
                 <h1 class="title">Check Avaliability</h1>
                 <div class="container">
                     <div class="container-input">
                         <label for="">Check In</label>
                         <div class="input">
-                        <input type="date" placeholder="Fri, 14th June 2023">
-                            <i class="bi bi-calendar"></i>
+                        <i class="bi bi-calendar"></i>
+                        <input type="date" name="checkIn">
+                    
                         </div>
                     </div>
                     <div class="container-input">
                         <label for="">Check Out</label>
                         <div class="input">
-                            <input type="date" placeholder="Sun, 16th June 2023">
-                            <i class="bi bi-calendar"></i>
+                        <i class="bi bi-calendar"></i>
+                            <input type="date" name="checkOut" >
+                          
                         </div>
                     </div>
-                    <button class="btn-check">Check availability</button>
+                    <button class="btn-check" type="submit">Check availability</button>
                 </div>
-            </div>
+            </form>
         </div>
         <div class="text">
             <p>

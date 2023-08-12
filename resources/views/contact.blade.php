@@ -7,7 +7,7 @@
             <h3 class="title">Contact</h3>
         </div>
         <div class="banner">
-            <a class="home" href="/index.php">Home</a>
+            <a class="home" href="/">Home</a>
             <span>|</span>
             <h1 class="page">Contact</h1>
         </div>
@@ -44,8 +44,6 @@
             </div>
         </div>
         <div class="image"><img src="/assets/contact/map.png" alt=""></div>
-      
-      
             <form class="contact-inputs" action="" method="POST">
                 @csrf
                 <div class="container-inputs">

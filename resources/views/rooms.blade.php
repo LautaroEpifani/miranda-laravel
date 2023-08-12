@@ -7,12 +7,18 @@
       <h3 class="title">Ultimate Room</h3>
     </div>
     <div class="banner">
-      <a class="home" href="/index.php">Home</a>
+      <a class="home" href="/">Home</a>
       <span>|</span>
       <h1 class="page">Rooms</h1>
     </div>
   </div>
   <div class="room-cards__container">
+  @if(session()->has('message'))
+  <div class="submit-message-container">
+                <h1>Thank you very much,</h1>
+                <h4>Your reservation has been successfully processed!</h4>
+    </div>  
+    @endif  
     <div class="room-cards">
     @foreach($rooms as $room)
         <div class="room-card">
@@ -45,20 +51,13 @@
                 <path d="M6.36002 9.87301L1.88669 4.99301H10.8334L6.36002 9.87301ZM6.36002 9.87301C6.36002 10.2797 6.36002 13.533 6.36002 13.533M4.73335 13.533H7.98669M3.51335 6.61967H9.20669M3.10669 2.95967L5.95335 6.61967M0.666687 4.17967L5.14002 1.33301H1.88669L0.666687 4.17967Z" stroke="#222222" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
               </svg>
             </div>
-
             <div class="slider">
-
-
               <img src="{{ $room -> images }}" alt="" />
-
             </div>
-
           </div>
           <div class="description">
-            
             <h1 class="title"><a href="/room/{{ $room -> id }}">{{ $room -> title }}</a></h1>
             <p class="text">
-           
             </p>
             <div class="text-container">
               <h1 class="price">{{ $room -> price }}<span class="night">/Night</span></h1>
