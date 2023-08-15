@@ -645,6 +645,20 @@
     gap: 20px;
     margin-bottom: 20px;
   }
+
+  .room-cards__container .room-card .description-flex {
+    text-align: center;
+    margin: 0 auto;
+    margin-top: 20px;
+    margin-left: 20px;
+    display: flex;
+    gap: 20px;
+  }
+
+  .room-cards__container .room-card .title-table {
+   font-size: 12px;
+   font-family: 'Archivo', sans-serif;
+  }
 }
 .double-bed__container {
   padding: 20px;
@@ -2018,6 +2032,8 @@ body {
   font-family: "Archivo", sans-serif;
   font-size: 10px;
 }
+
+
 
 @media (min-width: 1200px) {
   .rooms__container {
