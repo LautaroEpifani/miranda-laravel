@@ -10,28 +10,39 @@ class OrdersController extends Controller
     /**
      * Display a listing of the resource.
      */
-    public function index()
+    public function index($view)
     {
-        $orders = Order::paginate(5);
-        return view('orders', [
-            'orders' => $orders,
-        ]);
+        
+        $form = $view;   
+        if($form == 'orders') {
+            $orders = Order::paginate(5);
+            return view('orders', [
+                'orders' => $orders,
+                'form' => $form,
+            ]);
+        } else {
+            return view('orders', [
+                'form' => $form
+            ]);
+        }
+      
     }
 
-    /**
-     * Show the form for creating a new resource.
-     */
-    public function create()
-    {
-        return view('makeOrder');
-    }
 
     /**
      * Store a newly created resource in storage.
      */
     public function store(Request $request)
     {
-        
+        $order = new Order();
+        $order -> user_id = request('user_id');
+        $order -> room_id = request('room_id');
+        $order -> type = request('type'); 
+        $order -> description = request('description'); 
+
+        $order -> save();
+
+        return redirect('/makeOrder')->with('message', true);
     }
 
     /**

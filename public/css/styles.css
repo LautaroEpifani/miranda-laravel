@@ -1398,6 +1398,25 @@
   font-weight: 400;
 }
 
+.blog-contact__container .contact-inputs-order {
+ width: 100%;
+}
+
+.blog-contact__container .contact-inputs .container-input .input-order {
+  margin: 0 auto;
+  gap: 20px;
+  display: flex;
+  align-items: start;
+}
+
+.blog-contact__container .contact-inputs .container-input .input-order label {
+ font-size: 20px;
+}
+
+.blog-contact__container .contact-inputs .container-input textarea {
+ height: 70px;
+}
+
 .blog-contact__container .contact-inputs .container-input .input-icon {
   font-weight: 100;
   color: #000;

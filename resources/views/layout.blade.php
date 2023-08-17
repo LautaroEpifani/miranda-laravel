@@ -65,12 +65,12 @@
             </li>
           </ul>
           <div class="icons-nav">
-              <a href="/makeOrder">
+              <a href="{{ url('orders/makeOrder') }}">
               <h1>Make an Order</h1>
               </a>
             <span
               >
-              <a href="/orders">
+              <a href="{{ url('orders/orders') }}">
               <svg
                 width="20"
                 height="20"

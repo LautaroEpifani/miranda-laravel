@@ -30,9 +30,8 @@ Route::post('/room/{id}', [BookingsController::class, 'store']);
 
 Route::get('/offers', [RoomsController::class, 'indexOffers']);
 
-Route::get('/orders', [OrdersController::class, 'index']);
+Route::get('/orders/{view}', [OrdersController::class, 'index'])->middleware('auth');
 
-Route::get('/makeOrder', [OrdersController::class, 'create']);
 
 
 
