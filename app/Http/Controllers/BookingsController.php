@@ -17,7 +17,6 @@ class BookingsController extends Controller
         $booking -> check_in = request('checkIn'); 
         $booking -> check_out = request('checkOut'); 
         $booking -> special_request = "test special";
-        $booking -> order_date = date('Y-m-d H:i:s');
         $booking -> status = "Check In";
         $booking -> room_number = 7;
         $booking -> color = " ";

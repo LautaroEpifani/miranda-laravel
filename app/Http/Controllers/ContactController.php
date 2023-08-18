@@ -14,8 +14,6 @@ class ContactController extends Controller
         $message -> phone = request('phone'); 
         $message -> subject = request('subject'); 
         $message -> comment = request('comment'); 
-        $message -> date = date('Y-m-d');
-        $message -> hour = date('Y-m-d H:i:s');
 
         $message -> save();
 
