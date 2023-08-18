@@ -31,6 +31,7 @@ Route::post('/room/{id}', [BookingsController::class, 'store']);
 Route::get('/offers', [RoomsController::class, 'indexOffers']);
 
 Route::get('/orders/{view}', [OrdersController::class, 'index'])->middleware('auth');
+Route::post('/orders/{view}', [OrdersController::class, 'store']);
 
 
 

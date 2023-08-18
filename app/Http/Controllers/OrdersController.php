@@ -3,26 +3,29 @@
 namespace App\Http\Controllers;
 
 use App\Models\Order;
+use App\Models\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class OrdersController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     */
-    public function index($view)
+    
+
+    public function index(Request $request, $view)
     {
-        
-        $form = $view;   
+        $usersName = User::all();
+        $orders = Order::with('user')->paginate(5);
+        $form = $view; 
+
         if($form == 'orders') {
-            $orders = Order::paginate(5);
             return view('orders', [
                 'orders' => $orders,
                 'form' => $form,
+                'usersName' => $usersName
             ]);
         } else {
             return view('orders', [
-                'form' => $form
+                'form' => $form,
             ]);
         }
       
@@ -34,15 +37,16 @@ class OrdersController extends Controller
      */
     public function store(Request $request)
     {
+        ;
         $order = new Order();
-        $order -> user_id = request('user_id');
-        $order -> room_id = request('room_id');
+        $order -> user_id = Auth::user()->id;
+        $order -> room_id =  rand(1,10);
         $order -> type = request('type'); 
         $order -> description = request('description'); 
 
         $order -> save();
 
-        return redirect('/makeOrder')->with('message', true);
+        return redirect('/orders/makeOrder')->with('message', true);
     }
 
     /**

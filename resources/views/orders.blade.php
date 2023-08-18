@@ -17,21 +17,31 @@
   </div>
   <div class="room-cards__container">
     <div class="room-cards">
-    @foreach($orders as $order)
+      <div class="orders-container">
+      <h1>Orders</h1>
+         <div class="make-order">
+            <a href="/orders/makeOrder">New Order</a>
+          </div>
+          </div> 
         <div class="room-card">
-          <div class="slider-container"> 
+          <div class="order"> 
             <div class="description-flex">
+            <h1 class="title-table">User</h1>
+            <h1 class="title-table">Room</h1>
             <h1 class="title-table">Type</h1>
             <h1 class="title-table">Description</h1>
             </div>
-          <div class="description-flex">
+            @foreach($orders as $order)
+            <div class="description-flex">
+            <h1 class="title-table">{{ $order -> user -> name  }}</h1>
+            <h1 class="title-table">{{ $order -> room_id }}</h1>
             <h1 class="title-table">{{ $order -> type }}</h1>
             <h1 class="title-table">{{ $order -> description }}</h1>
-            <!-- <h1 class="title">{{ $order -> type }}</h1>
-            <h1 class="title">{{ $order -> type }}</h1> -->
+       
           </div>
+          @endforeach
         </div>
-        @endforeach
+       
     </div>
     <ul class="pagination">
       {{$orders -> links()}}
@@ -48,10 +58,11 @@
             <a class="home" href="/">Home</a>
             <span>|</span>
             <h1 class="page">Order</h1>
+            
         </div>
     </div>
     
-    <div class="blog-contact__container">
+    <div class="order__container">
   @if(session()->has('message'))
   <div class="submit-message-container">
                 <h1>Thank you very much,</h1>
@@ -65,7 +76,7 @@
                     <div class="container-input">
                         <div class="input-order">
                         <label for="">Choose what you want</label>
-                            <select type="text" name="type" >
+                            <select type="text" name="type">
                                 <option value="drinks">Drinks</option>
                                 <option value="food">Food</option>
                                 <option value="other">Other</option>
@@ -82,7 +93,7 @@
                     </div>
                   
                 </div>
-                <button type="submit" name="submit" class="btn-check">Send</button>
+                <button type="submit" name="submit" class="btn-check-order">Send</button>
             </form>
     
 
