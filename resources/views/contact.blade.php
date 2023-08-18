@@ -85,9 +85,6 @@
                 </div>
                 <button type="submit" name="submit" class="btn-check">Send</button>
             </form>
-    
-
-
     </div>
     @endsection
     @section('scripts')

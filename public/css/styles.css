@@ -696,10 +696,11 @@
     margin-bottom: 20px;
   }
 
-  .room-cards__container .room-card .description-flex {
-    gap: 80px;
-
+  .room-cards__container .room-card .description-flex button {
+    border: none;
+    cursor: pointer;
   }
+ 
   
   .room-cards__container .room-card .title-table {
     font-size: 15px;
@@ -1410,6 +1411,25 @@
 .blog-contact__container .submit-message-container h4 {
   color: #999999;
 }
+
+.order__container .submit-message-container {
+  height: 230px;
+  width: 50%;
+  margin: 0 auto;
+  border: 1px solid #000;
+  border-radius: 20px;
+  text-align: center;
+  padding-top: 60px;
+  margin-bottom: 120px;
+}
+.order__container .submit-message-container h1 {
+  color: #bdac8d;
+  margin-bottom: 40px;
+}
+.order__container .submit-message-container h4 {
+  color: #999999;
+}
+
 .blog-contact__container .contact-inputs {
   margin-top: 40px;
   padding: 20px;

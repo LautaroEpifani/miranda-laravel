@@ -9,26 +9,22 @@ use Illuminate\Support\Facades\Auth;
 
 class OrdersController extends Controller
 {
-    
 
-    public function index(Request $request, $view)
+
+    public function index()
     {
-        $usersName = User::all();
         $orders = Order::with('user')->paginate(5);
-        $form = $view; 
 
-        if($form == 'orders') {
-            return view('orders', [
-                'orders' => $orders,
-                'form' => $form,
-                'usersName' => $usersName
-            ]);
-        } else {
-            return view('orders', [
-                'form' => $form,
-            ]);
-        }
-      
+
+        return view('orders', [
+            'orders' => $orders,
+        ]);
+
+    }
+
+    public function create()
+    {
+        return view('createOrder');
     }
 
 
@@ -39,38 +35,41 @@ class OrdersController extends Controller
     {
         ;
         $order = new Order();
-        $order -> user_id = Auth::user()->id;
-        $order -> room_id =  rand(1,10);
-        $order -> type = request('type'); 
-        $order -> description = request('description'); 
+        $order->user_id = Auth::user()->id;
+        $order->room_id = request('room_number');
+        $order->type = request('type');
+        $order->description = request('description');
 
-        $order -> save();
+        $order->save();
 
-        return redirect('/orders/makeOrder')->with('message', true);
+        return redirect('/createOrder')->with('message', true);
     }
 
-    /**
-     * Display the specified resource.
-     */
-    public function show(string $id)
-    {
-        //
-    }
+
 
     /**
      * Show the form for editing the specified resource.
      */
     public function edit(string $id)
     {
-        //
+        $order = Order::find($id);
+
+        return view('/editOrder', [
+            'order' => $order,
+        ]);
     }
 
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, string $id)
+    public function update(Request $request, Order $order)
     {
-        //
+        $order->type = $request->type;
+        $order->description = $request->description;
+
+        $order->save();
+
+        return redirect('/orders');
     }
 
     /**
@@ -78,6 +77,8 @@ class OrdersController extends Controller
      */
     public function destroy(string $id)
     {
-        //
+        $order = Order::findOrFail($id);
+        $order->delete();
+        return redirect('/orders');
     }
 }

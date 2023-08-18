@@ -30,8 +30,12 @@ Route::post('/room/{id}', [BookingsController::class, 'store']);
 
 Route::get('/offers', [RoomsController::class, 'indexOffers']);
 
-Route::get('/orders/{view}', [OrdersController::class, 'index'])->middleware('auth');
-Route::post('/orders/{view}', [OrdersController::class, 'store']);
+Route::get('/orders', [OrdersController::class, 'index'])->middleware('auth');
+Route::get('/createOrder', [OrdersController::class, 'create']);
+Route::post('/createOrder', [OrdersController::class, 'store']);
+Route::get('/orders/{id}', [OrdersController::class, 'edit']);
+Route::put('/editOrder/{order}', [OrdersController::class, 'update']);
+Route::delete('/orders/{id}', [OrdersController::class, 'destroy']);
 
 
 
