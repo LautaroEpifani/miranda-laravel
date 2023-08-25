@@ -14,5 +14,4 @@ jobs:
         host: ${{ secrets.SERVER_ADDR }}
         username: ${{ secrets.USERNAME }}
         key: ${{ secrets.SSH_SECRET_KEY }}
-        script:
-          cd /var/www/html && git pull origin main && composer install && php artisan migrate && systemctl restart apache2
+        script: ls
