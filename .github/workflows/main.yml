@@ -1,17 +1,17 @@
-name: remote ssh command
-on:
-  push:
-    branches:
-    - main
-jobs:
-  deploy:
-    runs-on: ubuntu-latest
-    steps:
-    - uses: actions/checkout@v3
-    - name: executing remote ssh commands using password
-      uses: appleboy/ssh-action@v1.0.0
-      with:
-        host: ${{ secrets.SERVER_ADDR }}
-        username: ${{ secrets.USERNAME }}
-        key: ${{ secrets.SSH_SECRET_KEY }}
-        script: cd /var/www/miranda-laravel && sudo git pull origin main && sudo git add . && sudo git commit -m "Committing local changes" && sudo git push origin main && sudo composer install --ignore-platform-reqs --no-dev && sudo php artisan migrate && sudo chown -R www-data:www-data /var/www/miranda-laravel && sudo systemctl restart apache2
+# name: remote ssh command
+# on:
+#   push:
+#     branches:
+#     - main
+# jobs:
+#   deploy:
+#     runs-on: ubuntu-latest
+#     steps:
+#     - uses: actions/checkout@v3
+#     - name: executing remote ssh commands using password
+#       uses: appleboy/ssh-action@v1.0.0
+#       with:
+#         host: ${{ secrets.SERVER_ADDR }}
+#         username: ${{ secrets.USERNAME }}
+#         key: ${{ secrets.SSH_SECRET_KEY }}
+#         script: cd /var/www/miranda-laravel && sudo git pull origin main && sudo composer install --ignore-platform-reqs --no-dev && sudo php artisan migrate && sudo chown -R www-data:www-data /var/www/miranda-laravel && sudo systemctl restart apache2
