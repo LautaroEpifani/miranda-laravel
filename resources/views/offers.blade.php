@@ -47,7 +47,7 @@
                   consequatur, labore aspernatur esse corporis consectetur
                   excepturi.
                 </p>
-                <button>Book now</button>
+                <button><a href="/room/{{ $room -> id }}">Book now</a></button>
               </div>
               <div class="container-grid">
                 <div class="row">

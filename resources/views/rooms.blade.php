@@ -61,7 +61,7 @@
             </p>
             <div class="text-container">
               <h1 class="price">{{ $room -> price }}<span class="night">/Night</span></h1>
-              <h6>Booking Now</h6>
+              <h6><a href="/room/{{ $room -> id }}">Booking Now</a></h6>
             </div>
           </div>
         </div>

@@ -591,6 +591,12 @@
   margin-bottom: 20px;
   text-align: center;
 }
+
+.room-cards__container .room-card .description a {
+  text-decoration: none;
+  color: #bdbdbd;;
+}
+
 .room-cards__container .room-card .description .title a {
   text-decoration: none;
   color: #000;
@@ -1816,6 +1822,12 @@ body {
   font-weight: 600;
   letter-spacing: 2px;
 }
+
+.home-hero__container .text a {
+  text-decoration: none;
+  color: #fff;
+}
+
 .home-hero__container .text .take-tour {
   background-color: #bead8e;
   border: none;
@@ -1892,6 +1904,11 @@ body {
   letter-spacing: 2px;
   background-color: #bead8e;
   border: none;
+}
+
+.home-hero__container .date-check .btn-check a {
+  text-decoration: none;
+  color: #fff;
 }
 
 @media (min-width: 1200px) {
@@ -1971,6 +1988,12 @@ body {
   border: none;
   margin-top: 20px;
 }
+
+.about__container button a{
+  text-decoration: none;
+  color: #fff;
+}
+
 .about__container .img {
   margin-top: 60px;
   text-align: center;
@@ -2167,10 +2190,34 @@ body {
   width: 70%;
   margin: 0 auto;
 }
+
+.rooms__container .description .text-container {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  align-items: start;
+}
+
+.rooms__container .description .text-container button {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  width: 20%;
+  color: #fff;
+  text-transform: uppercase;
+  font-family: "Archivo", sans-serif;
+  font-weight: 600;
+  letter-spacing: 2px;
+  background-color: #bdac8d;
+  border: none;
+}
+
+.rooms__container .description .text-container a {
+  text-decoration: none;
+  color: #fff;
+}
+
 .rooms__container .description .title {
   font-family: "Old Standard TT", serif;
-  font-size: 50px;
-  font-weight: 100;
   font-size: 25px;
 }
 .rooms__container .description .text {
@@ -2336,7 +2383,13 @@ body {
   padding-right: 20px;
   padding-bottom: 20px;
   border-radius: 5px;
+  color: #bdeff8;
 }
+
+.facilities__container .filter-container:hover {
+  color: #333333;
+}
+
 .facilities__container .text-section {
   font-family: "Archivo", sans-serif;
   font-size: 15px;
@@ -2360,15 +2413,17 @@ body {
   display: flex;
   justify-content: space-between;
 }
+
 .facilities__container .card-slider-container .icon {
   margin-top: 90px;
 }
 .facilities__container .card-slider-container .number {
   font-family: "Archivo", sans-serif;
   font-size: 120px;
-  color: #bdeff8;
+  /* color: #bdeff8; */
   opacity: 0.3;
 }
+
 .facilities__container .card-slider-container .title {
   font-size: 20px;
   margin-bottom: 20px;

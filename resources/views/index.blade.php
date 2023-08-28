@@ -5,21 +5,11 @@
           <h6 class="description">The Ultimate Luxury Experience</h6>
           <h3 class="title">The Perfect Base For You</h3>
           <div class="button-display">
-          <button class="take-tour">Take a tour</button>
-          <button class="learn-more">Lean more</button>
+          <button class="take-tour"><a href="#video">Take a tour</a></button>
+          <button class="learn-more"> <a href="/about">Lean more</a></button>
           </div>
         </div>
-       <!-- <div class="submit-message-container">
-                <h1></h1>
-      
-            </div> -->
-       
-            @if(session()->has('message'))
-  <div class="submit-message-container">
-    
-                <h2>We have rooms available on that date ¡Check it out!</h2>
-    </div>  
-    @else 
+        
     <form class="date-check"  method="POST">
     @csrf 
           <div class="container-input">
@@ -32,9 +22,8 @@
             <input type="date" name="checkOut"/>
             <div class="input-error"> </div>
           </div>
-          <button type="submit" name="submit" class="btn-check">Check availability</button>
+          <button type="submit" name="submit" class="btn-check"><a href="/rooms">Check availability</a></button>
       </form>
-    @endif  
        
 
       </div>
@@ -51,7 +40,7 @@
             doloremque laboriosam. Obcaecati, enim reprehenderit odio recusandae
             illo magni voluptatibus, ipsam quas doloribus ut maiores!
           </p>
-          <button>Book now</button>
+          <button><a href="/rooms">Book now</a></button>
         </div>
         <div class="container-team">
         <div class="team">
@@ -215,20 +204,22 @@
           <div class="slider-bottom"></div>
         </div>
         <div class="description">
-          <h1 class="title">Minimal Duplex Room</h1>
+          <div class="text-container">
+          <h1 class="title">Looking for offers?</h1>
+          <button><a href="/offers">Our Offers</a></button>
+          </div>
           <p class="text">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim,
-            voluptat quasi as voluptatibus consequuntu .
+          See our prices from:
           </p>
-          <h1 class="price">$345<span class="night">/Night</span></h1>
+          <h1 class="price">$191<span class="night">/Night</span></h1>
         </div>
       </div>
-      <div class="video__container">
+      <div class="video__container" id="video">
         <div class="sub-container">
         <div class="text-container">
         <h6 class="text-section">Intro video</h6>
         <h1 class="title">Meet With Our Luxury Place.</h1>
-        <p class="text">
+        <p class="text">  
           Lorem, ipsum dolor sit amet consectetur adipisicing eee. Similique
           aliquam vero accusamus natus, vel ea escensa laboriosam adipisci
           repudiandae neque ducimus aliquffa voluptatibus a dolores eligendi
