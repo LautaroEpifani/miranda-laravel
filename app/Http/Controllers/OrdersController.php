@@ -36,7 +36,7 @@ class OrdersController extends Controller
         ;
         $order = new Order();
         // $order->user_id = Auth::user()->id;
-        $order->user_id = rand(0,10);
+        $order->user_id = rand(1,10);
         $order->room_id = request('room_number');
         $order->type = request('type');
         $order->description = request('description');
