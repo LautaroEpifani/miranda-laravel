@@ -14,5 +14,4 @@ jobs:
         host: ${{ secrets.SERVER_ADDR }}
         username: ${{ secrets.USERNAME }}
         key: ${{ secrets.SSH_SECRET_KEY }}
-        script:
-          cd /var/www/html && git pull origin main && composer install && php artisan migrate && systemctl restart apache2
+        script: cd /var/www/miranda-laravel && sudo git pull origin main && sudo composer install --ignore-platform-reqs --no-dev && sudo php artisan migrate && sudo chown -R www-data:www-data /var/www/miranda-laravel && sudo systemctl restart apache2
