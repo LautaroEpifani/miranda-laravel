@@ -15,8 +15,8 @@
   <div class="room-cards__container">
   @if(session()->has('message'))
   <div class="submit-message-container">
-                <h1>Thank you very much,</h1>
-                <h4>Your reservation has been successfully processed!</h4>
+                <h1>¡Thank you for your request!</h1>
+                <h4>We have received it correctly. Someone from our team will get back to you very soon.</h4>
     </div>  
     @endif  
     <div class="room-cards">

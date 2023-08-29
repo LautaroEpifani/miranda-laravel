@@ -10,7 +10,7 @@
           </div>
         </div>
         
-    <form class="date-check"  method="POST">
+    <form class="date-check">
     @csrf 
           <div class="container-input">
             <label for="">Arrival Date</label>
