@@ -876,6 +876,7 @@
     display: flex;
     gap: 60px;
   }
+
   .double-bed__container .container-desktop .description {
     width: 50%;
   }
@@ -1305,6 +1306,12 @@
     border: none;
     background-color: #bead8e;
   }
+
+  .double-bed__container .container-text button a {
+    text-decoration: none;
+    color: #fff;
+  }
+
   .double-bed__container .text {
     width: 100%;
   }
@@ -2308,6 +2315,12 @@ body {
 .video__container .btn-book {
   display: none;
 }
+
+.video__container .btn-book a {
+  text-decoration: none;
+  color: #fff;
+}
+
 .video__container .video {
   margin-top: 30px;
   margin-bottom: 30px;
@@ -2420,7 +2433,6 @@ body {
 .facilities__container .card-slider-container .number {
   font-family: "Archivo", sans-serif;
   font-size: 120px;
-  /* color: #bdeff8; */
   opacity: 0.3;
 }
 
@@ -2428,6 +2440,7 @@ body {
   font-size: 20px;
   margin-bottom: 20px;
   margin-top: 40px;
+  color: #000;
 }
 .facilities__container .card-slider-container .text {
   color: #777777;

@@ -226,7 +226,7 @@
           officia fugit eveniet nesaa obcaecati architecto pariatur omnis
           exercitatioe Eaqueeg suscipit ipsum doloremque natus laboriosam, hic
         </p>
-        <button class="btn-book">BOOK NOW</button>
+        <button class="btn-book"><a href="/rooms">BOOK NOW</a></button>
         </div>
         <div class="video">
           <video preload="none" id="video" poster="/assets/video.jpg">
